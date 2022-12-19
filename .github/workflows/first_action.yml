@@ -1,0 +1,11 @@
+name: my_first_action
+on : push
+jobs:
+  first_jobs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: say_hi
+        run: echo "runnnnn"
+      - name: stop 
+        run:  echo "stoppp"
+
