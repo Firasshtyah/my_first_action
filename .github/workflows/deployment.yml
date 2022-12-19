@@ -1,0 +1,11 @@
+name: testing and deplyment
+on: push
+jobs:
+  github_object:
+    runs-on: ubuntu-latest
+    steps: 
+      -run: echo "${{ toJSON(github) }}"
+
+    
+
+
