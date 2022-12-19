@@ -3,8 +3,9 @@ on: push
 jobs:
   github_object:
     runs-on: ubuntu-latest
-    steps: 
-      -run: echo "${{ toJSON(github) }}"
+    steps:
+      - name: get github object
+        run: echo "${{toJSON(github)}}"
 
     
 
