@@ -1,11 +1,15 @@
-name: my_first_action
-on : push
+name: app_test
+on: push
 jobs:
-  first_jobs:
+  install_npm:
     runs-on: ubuntu-latest
     steps:
-      - name: say_hi
-        run: echo "runnnnn"
-      - name: stop 
-        run:  echo "stoppp"
+      - name : get the code
+        run: echo "get the code from repo"
+        uses: actions/checkout@V3
+      - name: install packeges
+        run: npm ci
+      - name: test code
+        run: npm test
+
 
