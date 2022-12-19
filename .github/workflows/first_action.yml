@@ -5,7 +5,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: get the code
-        run: echo "get the code from repo"
         uses: actions/checkout@V3
       - name: install packeges
         run: npm ci
